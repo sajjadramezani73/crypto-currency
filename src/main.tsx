@@ -10,10 +10,13 @@ import {
 } from "react-router-dom";
 
 import App from "./App.tsx";
+import Home from "./pages/home/index.tsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
+      <Route index={true} element={<Home />} />
+
       <Route path="*" element={<Navigate to={"/"} />} />
     </Route>
   )

@@ -1,11 +1,23 @@
-import { Button } from "./components/ui/button";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+import { Outlet } from "react-router-dom";
 
 function App() {
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        refetchInterval: false,
+        refetchOnWindowFocus: false,
+        retry: 2,
+      },
+    },
+  });
+
   return (
     <>
-      <Button variant="default" size="lg">
-        کلیک کنید
-      </Button>
+      <QueryClientProvider client={queryClient}>
+        <Outlet />
+      </QueryClientProvider>
     </>
   );
 }
