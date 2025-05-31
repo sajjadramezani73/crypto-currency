@@ -5,7 +5,11 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import type { IGlobalState } from "./redux/type";
 
+import { setupAxios } from "./requests";
+
 function App() {
+  setupAxios();
+
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
