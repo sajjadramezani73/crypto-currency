@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import type { IGlobalState } from "./redux/type";
 
 import { setupAxios } from "./requests";
+import Header from "./components/global/header";
 
 function App() {
   setupAxios();
@@ -30,7 +31,10 @@ function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <Outlet />
+        <Header />
+        <div className="p-8">
+          <Outlet />
+        </div>
       </QueryClientProvider>
     </>
   );
