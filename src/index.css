@@ -3,59 +3,70 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/************** YekanBakh With EN Number ***************/
+/******************* Poppins Font *****************/
 @font-face {
-  font-family: YekanBakhEn;
+  font-family: Poppins;
   font-style: normal;
   font-display: swap;
   font-weight: 900;
-  src: url("/assets/fonts/YekanBakhEn/YekanBakh-Heavy.woff2") format("woff2"),
-    url("/assets/fonts/YekanBakhEn/YekanBakh-Heavy.woff") format("woff");
+  src: url("/assets/fonts/Poppins/Poppins-Black.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: YekanBakhEn;
+  font-family: Poppins;
   font-style: normal;
   font-display: swap;
-  font-weight: 700;
-  src: url("/assets/fonts/YekanBakhEn/YekanBakh-Bold.woff2") format("woff2"),
-    url("/assets/fonts/YekanBakhEn/YekanBakh-Bold.woff") format("woff");
+  font-weight: 800;
+  src: url("/assets/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: YekanBakhEn;
+  font-family: Poppins;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url("/assets/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Poppins;
   font-style: normal;
   font-display: swap;
   font-weight: 500;
-  src: url("/assets/fonts/YekanBakhEn/YekanBakh-Medium.woff2") format("woff2"),
-    url("/assets/fonts/YekanBakhEn/YekanBakh-Medium.woff") format("woff");
+  src: url("/assets/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: YekanBakhEn;
+  font-family: Poppins;
   font-style: normal;
   font-display: swap;
   font-weight: 400;
-  src: url("/assets/fonts/YekanBakhEn/YekanBakh-Regular.woff2") format("woff2"),
-    url("/assets/fonts/YekanBakhEn/YekanBakh-Regular.woff") format("woff");
+  src: url("/assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: YekanBakhEn;
+  font-family: Poppins;
   font-style: normal;
   font-display: swap;
   font-weight: 300;
-  src: url("/assets/fonts/YekanBakhEn/YekanBakh-Light.woff2") format("woff2"),
-    url("/assets/fonts/YekanBakhEn/YekanBakh-Light.woff") format("woff");
+  src: url("/assets/fonts/Poppins/Poppins-Light.ttf") format("truetype");
 }
-/************** YekanBakh With EN Number ***************/
+
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100;
+  src: url("/assets/fonts/Poppins/Poppins-Thin.ttf") format("truetype");
+}
+/******************* Poppins Font *****************/
 
 * {
   box-sizing: border-box;
 }
 
 :root {
-  font-family: YekanBakhEn;
+  font-family: Poppins;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -100,6 +111,8 @@
   --sidebar-ring: oklch(0.708 0 0);
 
   --titr: rgb(70 70 80); /* #464650 */
+  --titr-dark: rgb(21 24 31); /* #15181f */
+  --caption: rgb(130 134 146); /* #828692 */
 }
 
 @theme inline {
@@ -143,6 +156,8 @@
   --color-sidebar-ring: var(--sidebar-ring);
 
   --color-titr: var(--titr);
+  --color-titrDark: var(--titr-dark);
+  --color-caption: var(--caption);
 }
 
 .dark {
@@ -182,6 +197,8 @@
   --sidebar-ring: oklch(0.556 0 0);
 
   --titr: rgb(209 210 214); /* #d1d2d6 */
+  --titr-dark: rgb(241 241 241); /* #f1f1f1 */
+  --caption: rgb(161 165 176); /* #a1a5b0 */
 }
 
 @layer base {
